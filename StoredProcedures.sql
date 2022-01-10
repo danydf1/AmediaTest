@@ -280,7 +280,7 @@ BEGIN
 END
 
 GO
---10 Devolver pelÌcula
+--10 Devolver pel√≠cula
 
 create procedure devolverPelicula(
 @cod_usuario int,
@@ -298,7 +298,7 @@ UPDATE tPeliculaAlquilada
 END
 GO
 
---11 Ver pelÌculas que no fueron devueltas y que usuarios la tienen
+--11 Ver pel√≠culas que no fueron devueltas y que usuarios la tienen
 
 CREATE PROCEDURE SinDevolver
 AS
@@ -311,7 +311,7 @@ BEGIN
 END
 GO
 
---12 Ver quÈ pelÌculas fueron alquiladas por usuario y cu·nto pagÛ y que dÌa
+--12 Ver qu√© pel√≠culas fueron alquiladas por usuario y cu√°nto pag√≥ y que d√≠a
 
 CREATE PROCEDURE AlquilaresPorUsuario
 AS
@@ -327,7 +327,7 @@ END
 GO
 
 GO
---13 Ver todas las pelÌculas, cuantas veces fueron alquiladas y cuanto se recaudo por ellas
+--13 Ver todas las pel√≠culas, cuantas veces fueron alquiladas y cuanto se recaudo por ellas
 CREATE PROCEDURE AlquilaresPorPeliculas
 AS
 BEGIN
@@ -338,5 +338,3 @@ BEGIN
 	Group by P.txt_desc
 END
 GO
-
-exec AlquilaresPorPeliculas
