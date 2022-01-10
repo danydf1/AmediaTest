@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TestDanielFernandez.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Lista de Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Lista de Usuarios</h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Usuarios">Registrar Usuario</a>
+        </div>
+    </div>
+    <div class="row">
+        @if (Model.Count() > 0){
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td>@Html.DisplayNameFor(m => m.ID)</td>
+                    <td>@Html.DisplayNameFor(m => m.Mail)</td>
+                    <td>@Html.DisplayNameFor(m => m.Nombre)</td>
+                    <td>@Html.DisplayNameFor(m => m.Apellido)</td>
+                    <td>@Html.DisplayNameFor(m => m.Dni)</td>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ID</td>
+                        <td>@item.Mail</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Apellido</td>
+                        <td>@item.Dni</td>
+                        <td>
+                            <a asp-controller="Usuarios" asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Editar</a>
+                            <a asp-controller="Usuarios" asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Borrar</a>
+                        </td>
+                    </tr>
+                        }
+                </tbody>
+            </table>
+         }else{
+         <p>no hay Registro</p>
+         }
+
+    </div>
+
+</div>
+

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Danydf\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Danydf\\.nuget\\packages"
+    ]
+  }
+}
